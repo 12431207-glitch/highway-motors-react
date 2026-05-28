@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 
-import car1 from "./assets/car1.jpg";
-import car2 from "./assets/car2.jpg";
-import car3 from "./assets/car3.jpg";
-import car4 from "./assets/car4.jpg";
+import indexImg from "./assets/indeximg.jpeg";
+import mercedes from "./assets/mercedes.jpeg";
+import audi from "./assets/audi.jpeg";
+import suv from "./assets/suvimg.jpeg";
+import sports from "./assets/sc.jpeg";
+import tesla from "./assets/tesla.jpeg";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -26,7 +28,7 @@ function App() {
         <div className="page">
           <h1>Welcome to Highway Motors</h1>
           <p>Highway Motors is a ReactJS car dealership website.</p>
-          <img className="hero-img" src={car1} alt="Car dealership" />
+          <img className="hero-img" src={indexImg} alt="Highway Motors" />
         </div>
       )}
 
@@ -36,26 +38,32 @@ function App() {
 
           <div className="cards">
             <div className="card">
-              <img src={car1} alt="Sedan" />
-              <h3>Sedan</h3>
-              <p>$25,000</p>
+              <img src={mercedes} alt="Mercedes" />
+              <h3>Mercedes</h3>
+              <p>$40,000</p>
             </div>
 
             <div className="card">
-              <img src={car2} alt="SUV" />
-              <h3>SUV</h3>
+              <img src={audi} alt="Audi" />
+              <h3>Audi</h3>
               <p>$35,000</p>
             </div>
 
             <div className="card">
-              <img src={car3} alt="Sports Car" />
+              <img src={suv} alt="SUV" />
+              <h3>SUV</h3>
+              <p>$38,000</p>
+            </div>
+
+            <div className="card">
+              <img src={sports} alt="Sports Car" />
               <h3>Sports Car</h3>
               <p>$50,000</p>
             </div>
 
             <div className="card">
-              <img src={car4} alt="Electric Car" />
-              <h3>Electric Car</h3>
+              <img src={tesla} alt="Tesla" />
+              <h3>Tesla</h3>
               <p>$45,000</p>
             </div>
           </div>
