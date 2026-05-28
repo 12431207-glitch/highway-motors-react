@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 
+import car1 from "./assets/car1.jpg";
+import car2 from "./assets/car2.jpg";
+import car3 from "./assets/car3.jpg";
+import car4 from "./assets/car4.jpg";
+
 function App() {
   const [page, setPage] = useState("home");
 
@@ -20,18 +25,39 @@ function App() {
       {page === "home" && (
         <div className="page">
           <h1>Welcome to Highway Motors</h1>
-          <p>Highway Motors is a car dealership website built with ReactJS.</p>
+          <p>Highway Motors is a ReactJS car dealership website.</p>
+          <img className="hero-img" src={car1} alt="Car dealership" />
         </div>
       )}
 
       {page === "cars" && (
         <div className="page">
           <h1>Available Cars</h1>
+
           <div className="cards">
-            <div className="card">Sedan - $25,000</div>
-            <div className="card">SUV - $35,000</div>
-            <div className="card">Sports Car - $50,000</div>
-            <div className="card">Electric Car - $45,000</div>
+            <div className="card">
+              <img src={car1} alt="Sedan" />
+              <h3>Sedan</h3>
+              <p>$25,000</p>
+            </div>
+
+            <div className="card">
+              <img src={car2} alt="SUV" />
+              <h3>SUV</h3>
+              <p>$35,000</p>
+            </div>
+
+            <div className="card">
+              <img src={car3} alt="Sports Car" />
+              <h3>Sports Car</h3>
+              <p>$50,000</p>
+            </div>
+
+            <div className="card">
+              <img src={car4} alt="Electric Car" />
+              <h3>Electric Car</h3>
+              <p>$45,000</p>
+            </div>
           </div>
         </div>
       )}
@@ -39,11 +65,27 @@ function App() {
       {page === "services" && (
         <div className="page">
           <h1>Our Services</h1>
+
           <div className="cards">
-            <div className="card">Car Sales</div>
-            <div className="card">Maintenance</div>
-            <div className="card">Inspection</div>
-            <div className="card">Customer Support</div>
+            <div className="card">
+              <h3>Car Sales</h3>
+              <p>We sell different types of cars.</p>
+            </div>
+
+            <div className="card">
+              <h3>Maintenance</h3>
+              <p>We provide basic car maintenance.</p>
+            </div>
+
+            <div className="card">
+              <h3>Inspection</h3>
+              <p>We inspect cars before selling them.</p>
+            </div>
+
+            <div className="card">
+              <h3>Customer Support</h3>
+              <p>We help customers choose the right car.</p>
+            </div>
           </div>
         </div>
       )}
@@ -51,7 +93,10 @@ function App() {
       {page === "about" && (
         <div className="page">
           <h1>About Us</h1>
-          <p>This is a responsive ReactJS frontend project for a car dealership.</p>
+          <p>
+            Highway Motors is a responsive frontend web application created
+            using ReactJS for a car dealership project.
+          </p>
         </div>
       )}
 
